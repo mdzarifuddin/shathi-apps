@@ -7,7 +7,7 @@ window.APPS = [
     "name": "Rapid Office Pro",
     "tagline": "A fast reader for every document on your phone.",
     "category": "Productivity",
-    "icon": null,
+    "icon": "img/rapid-office-pro.png",
     "color": [
       "#2563eb",
       "#1e40af"
@@ -395,7 +395,7 @@ window.APPS = [
     "name": "Call Recorder",
     "tagline": "Record calls on your device, protected by an app lock.",
     "category": "Utility",
-    "icon": null,
+    "icon": "img/call-recorder.png",
     "color": [
       "#0891b2",
       "#164e63"
