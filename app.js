@@ -151,7 +151,7 @@
       body.appendChild(el("p", null, app.tagline));
       var meta = el("div", "meta");
       meta.appendChild(el("span", "tag", app.category));
-      meta.appendChild(el("span", null, "v" + app.version.split(" ")[0] + " · " + app.size));
+      meta.appendChild(el("span", null, (/^\d/.test(app.version) ? "v" : "") + app.version + " · " + app.size));
       var live = el("span", "live");
       meta.appendChild(live);
       getStats().then(function (all) { if (all && all[app.id]) live.textContent = statText(all[app.id]); });
