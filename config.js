@@ -4,6 +4,7 @@ window.SITE = {
   name: "Team Shathi Apps",
   repo: "YOUR_GITHUB_USERNAME/YOUR_REPO",   // e.g. "zarif/apps"
   tag: "apps",                              // release tag that holds all the APKs
-  contact: ""                               // optional: public contact email shown in the footer
+  contact: "",                              // optional: public contact email shown in the footer
+  api: "https://shathi-apps-api.porarshathi-data.workers.dev" // download counter + reviews (Cloudflare Worker); "" turns both off
 };
 

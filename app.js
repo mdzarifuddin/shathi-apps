@@ -36,6 +36,21 @@
     return null;
   }
 
+  // ---- live numbers (download count, ratings, reviews) from the small API; the site works without it ----
+  var API = /^https:\/\/[a-z0-9.-]+$/.test(SITE.api || "") ? SITE.api : "";
+  var statsP = null;
+  function getStats() {
+    if (!API) return Promise.resolve(null);
+    if (!statsP) statsP = fetch(API + "/api/stats").then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+    return statsP;
+  }
+  function stars(n) { return "★★★★★".slice(0, n) + "☆☆☆☆☆".slice(0, 5 - n); }
+  function statText(s) {
+    if (!s) return "";
+    var t = s.downloads + (s.downloads === 1 ? " download" : " downloads");
+    return s.count ? "★ " + s.rating.toFixed(1) + " (" + s.count + ") · " + t : t;
+  }
+
   function downloadButton(app) {
     var url = downloadUrl(app);
     if (!url) {
@@ -46,6 +61,13 @@
     a.href = url;
     a.rel = "noopener noreferrer";
     a.setAttribute("download", app.file);
+    a.addEventListener("click", function () {
+      if (!API) return;
+      try {
+        fetch(API + "/api/dl/" + app.id, { method: "POST", keepalive: true })
+          .then(function () { statsP = null; }).catch(function () {});
+      } catch (e) { /* counting is best effort */ }
+    });
     return a;
   }
 
@@ -118,6 +140,9 @@
       var meta = el("div", "meta");
       meta.appendChild(el("span", "tag", app.category));
       meta.appendChild(el("span", null, "v" + app.version.split(" ")[0] + " · " + app.size));
+      var live = el("span", "live");
+      meta.appendChild(live);
+      getStats().then(function (all) { if (all && all[app.id]) live.textContent = statText(all[app.id]); });
       body.appendChild(meta);
       card.appendChild(body);
       card.appendChild(el("span", "go", "→"));
@@ -143,6 +168,9 @@
     row.appendChild(downloadButton(app));
     t.appendChild(row);
     t.appendChild(el("p", "small", "Version " + app.version + " · " + app.android));
+    var liveStat = el("p", "small livestat");
+    t.appendChild(liveStat);
+    getStats().then(function (all) { if (all && all[app.id]) liveStat.textContent = statText(all[app.id]); });
     head.appendChild(t);
     root.appendChild(head);
 
@@ -228,6 +256,78 @@
     adv.appendChild(el("p", "small", "Windows: Get-FileHash file.apk · macOS/Linux: shasum -a 256 file.apk"));
     inst.appendChild(adv);
     root.appendChild(inst);
+
+    if (API) root.appendChild(reviewsBlock(app));
+  }
+
+  function reviewsBlock(app) {
+    var sec = el("section", "block reviews");
+    sec.appendChild(el("h2", null, "Ratings & reviews"));
+    var summary = el("p", "small");
+    getStats().then(function (all) {
+      var s = all && all[app.id];
+      summary.textContent = s && s.count ? "★ " + s.rating.toFixed(1) + " average from " + s.count + (s.count === 1 ? " review" : " reviews") : "No reviews yet. Be the first.";
+    });
+    sec.appendChild(summary);
+
+    var list = el("div", "rlist");
+    sec.appendChild(list);
+    fetch(API + "/api/reviews/" + app.id).then(function (r) { return r.ok ? r.json() : []; }).then(function (items) {
+      items.forEach(function (r) {
+        var card = el("div", "review");
+        var top = el("div", "rtop");
+        top.appendChild(el("b", "rstars", stars(r.rating)));
+        top.appendChild(el("span", null, (r.name || "Anonymous") + " · " + new Date(r.ts).toLocaleDateString()));
+        card.appendChild(top);
+        if (r.comment) card.appendChild(el("p", null, r.comment));
+        list.appendChild(card);
+      });
+    }).catch(function () {});
+
+    // write a review
+    var box = el("div", "rform");
+    box.appendChild(el("h3", null, "Rate this app"));
+    var rating = 0, starRow = el("div", "starpick"), starBtns = [];
+    starRow.setAttribute("role", "group"); starRow.setAttribute("aria-label", "Your rating");
+    for (var i = 1; i <= 5; i++) (function (n) {
+      var b = el("button", "star", "☆");
+      b.type = "button"; b.setAttribute("aria-label", n + (n === 1 ? " star" : " stars"));
+      b.addEventListener("click", function () {
+        rating = n;
+        starBtns.forEach(function (x, j) { x.textContent = j < n ? "★" : "☆"; x.classList.toggle("on", j < n); });
+      });
+      starBtns.push(b); starRow.appendChild(b);
+    })(i);
+    box.appendChild(starRow);
+
+    var name = el("input");
+    name.type = "text"; name.maxLength = 40; name.placeholder = "Your name (optional)"; name.autocomplete = "off";
+    name.setAttribute("aria-label", "Your name (optional)");
+    var comment = el("textarea");
+    comment.maxLength = 500; comment.rows = 4; comment.placeholder = "Write a comment (optional)";
+    comment.setAttribute("aria-label", "Comment (optional)");
+    var hp = el("input", "hp");
+    hp.type = "text"; hp.tabIndex = -1; hp.autocomplete = "off"; hp.setAttribute("aria-hidden", "true");
+    var send = el("button", "btn send", "Send review");
+    send.type = "button";
+    var msg = el("p", "small rmsg");
+    msg.setAttribute("role", "status");
+    send.addEventListener("click", function () {
+      if (!rating) { msg.textContent = "Choose 1 to 5 stars first."; return; }
+      send.disabled = true; msg.textContent = "Sending…";
+      fetch(API + "/api/reviews/" + app.id, {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ rating: rating, name: name.value, comment: comment.value, hp: hp.value })
+      }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (res) {
+          if (res.ok) { msg.textContent = "Thank you! Your review will appear after it is approved."; name.value = ""; comment.value = ""; return; }
+          msg.textContent = res.j.error || "Could not send. Try again later."; send.disabled = false;
+        }).catch(function () { msg.textContent = "Could not send. Check your connection."; send.disabled = false; });
+    });
+    [name, comment, hp, send, msg].forEach(function (n) { box.appendChild(n); });
+    box.appendChild(el("p", "small", "Reviews are checked before they show. Please do not write your phone number, email or other personal details, and no links."));
+    sec.appendChild(box);
+    return sec;
   }
 
   function route() {
