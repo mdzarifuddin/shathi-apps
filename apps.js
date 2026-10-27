@@ -467,21 +467,21 @@ window.APPS = [
     ]
   },
   {
-    "id": "porikkhasathi",
-    "name": "PorikkhaSathi",
-    "tagline": "HSC MCQ & CQ practice, mock and live exams.",
+    "id": "porar-shathi",
+    "name": "Porar Shathi (পড়ার সাথী)",
+    "tagline": "HSC MCQ & CQ practice, mock and live exams, for students and teachers.",
     "category": "Education",
-    "icon": "img/porikkhasathi.png",
+    "icon": "img/porar-shathi.png",
     "color": [
       "#16a34a",
       "#14532d"
     ],
-    "version": "1.0.0",
-    "size": "98 MB",
+    "version": "build 28",
+    "size": "98.6 MB",
     "android": "Android 7.0+ (64-bit ARM phones)",
-    "file": "porikkhasathi-1.0.0.apk",
-    "sha256": "9afa6b183d9a28f53717bf864c63c3456bdc2f77b557a4fb221ca2d76336e07d",
-    "about": "A Bangla exam-prep app for HSC students and teachers in Bangladesh, with a large question bank, mock and live exams, leaderboards and an AI study coach. Screens marked 'design preview' come from the app's design files; the last one is a live screenshot.",
+    "file": "porar-shathi-build28.apk",
+    "sha256": "ad898bf90c1cafe13fc45cb71d6b84eb6ee95a488f9bb671815d24fdcdffc4a9",
+    "about": "A Bangla exam-prep app for HSC students and teachers in Bangladesh, with a large offline question bank, mock and live exams, friend duels and an AI study coach. All screenshots are from the installed app (build 28).",
     "features": [
       [
         "Home dashboard",
@@ -490,98 +490,83 @@ window.APPS = [
       ],
       [
         "Question bank",
-        "Chapter-wise MCQ and CQ practice with explanations and saved questions.",
+        "Subject-wise and institution-wise MCQ and CQ practice with progress per subject.",
         1
       ],
       [
         "Timed exams",
-        "Mock exams with a question palette, review marks and negative marking.",
+        "Mock MCQ exams with your chosen subjects, count and time, and optional negative marking.",
         2
       ],
       [
-        "Detailed results",
-        "Accuracy, speed, topic-wise breakdown and answer review.",
+        "Live exams",
+        "Join an upcoming live exam, or enter a teacher's exam code or link.",
         3
       ],
       [
-        "Live exams",
-        "Compete in live exams with students across the country.",
+        "Duels",
+        "Challenge a friend or a random opponent in head-to-head question duels.",
         4
       ],
       [
-        "Leaderboards",
-        "National, district and college rankings with levels and streaks.",
+        "AI coach",
+        "Finds weak topics from your mistakes, predicts a grade and plans your day.",
         5
       ],
       [
-        "Statistics",
-        "Track practice and accuracy over time.",
+        "Statistics & leaderboard",
+        "Track practice and accuracy over time and see national and college rankings.",
         6
       ],
       [
-        "AI coach",
-        "Finds weak topics from your mistakes and predicts your grade.",
-        7
+        "Detailed results",
+        "Accuracy, speed, topic-wise breakdown and answer review after each exam."
       ],
       [
-        "Duels & friends",
-        "Challenge friends in head-to-head question duels."
-      ],
-      [
-        "Notes & downloads",
-        "Study notes and offline downloads."
+        "Notes & formulas",
+        "Study notes and formulas for offline revision."
       ],
       [
         "Teacher tools",
-        "Teachers can create and manage exams and batches for their students."
+        "Teachers can create exams, share them by code or link, and see live results."
       ]
     ],
-    "notes": "Large download (98 MB). Works on 64-bit ARM phones, which is nearly all modern Android devices.",
+    "notes": "Large download (98.6 MB). Works on 64-bit ARM phones, which is nearly all modern Android devices.",
     "shots": [
       {
-        "src": "img/shots/porar-d1.jpg",
-        "title": "Home dashboard (design preview)",
+        "src": "img/shots/porar-1.jpg",
+        "title": "Home dashboard",
         "text": "Readiness score, today's mission, notes and quick actions."
       },
       {
-        "src": "img/shots/porar-d2.jpg",
-        "title": "Question bank (design preview)",
-        "text": "Subject-wise and institution-wise questions with progress."
+        "src": "img/shots/porar-2.jpg",
+        "title": "Question bank",
+        "text": "Subject-wise questions with chapter counts and progress."
       },
       {
-        "src": "img/shots/porar-d3.jpg",
-        "title": "Exam screen (design preview)",
-        "text": "Timed MCQ with question palette, review marking and negative marking."
+        "src": "img/shots/porar-3.jpg",
+        "title": "MCQ exam setup",
+        "text": "Pick subjects, question count, time and negative marking."
       },
       {
-        "src": "img/shots/porar-d4.jpg",
-        "title": "Result (design preview)",
-        "text": "Score, accuracy, topic-wise breakdown and answer review."
+        "src": "img/shots/porar-4.jpg",
+        "title": "Live exams",
+        "text": "Join with a teacher's code, or register for the next live exam."
       },
       {
-        "src": "img/shots/porar-d5.jpg",
-        "title": "Live exams (design preview)",
-        "text": "Join live and upcoming exams nationwide."
+        "src": "img/shots/porar-5.jpg",
+        "title": "Daily duel",
+        "text": "Pick subjects and difficulty, then face an opponent."
       },
       {
-        "src": "img/shots/porar-d6.jpg",
-        "title": "Leaderboard (design preview)",
-        "text": "National, district and college rankings."
+        "src": "img/shots/porar-6.jpg",
+        "title": "AI coach",
+        "text": "Predicted grade, weak topics and a plan for today."
       },
       {
-        "src": "img/shots/porar-d7.jpg",
-        "title": "Statistics (design preview)",
-        "text": "Practice history, accuracy and streak charts."
-      },
-      {
-        "src": "img/shots/porar-d8.jpg",
-        "title": "AI coach (design preview)",
-        "text": "Weak-topic analysis and grade prediction."
-      },
-      {
-        "src": "img/shots/porar-1.jpg",
-        "title": "Welcome (from the app)",
-        "text": "The first screen of the installed app."
+        "src": "img/shots/porar-7.jpg",
+        "title": "Statistics",
+        "text": "Daily practice, accuracy trend and leaderboard."
       }
     ]
   }
