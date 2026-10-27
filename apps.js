@@ -473,8 +473,8 @@ window.APPS = [
     "category": "Education",
     "icon": "img/porar-shathi.png",
     "color": [
-      "#16a34a",
-      "#14532d"
+      "#7c3aed",
+      "#1e3a8a"
     ],
     "version": "build 28",
     "size": "98.6 MB",
