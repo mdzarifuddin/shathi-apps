@@ -123,3 +123,9 @@ main:focus,main:focus-visible{outline:none}
 .btn.send{justify-self:start;background:linear-gradient(90deg,var(--accent),var(--accent2));color:var(--accent-ink);cursor:pointer;font:inherit;font-weight:700}
 .btn.send::before{content:""}
 .btn.send:disabled{opacity:.6;cursor:default}
+/* download feedback */
+.btn.busy{pointer-events:none;opacity:.85}
+.btn.busy::before{content:"";width:16px;height:16px;border:3px solid #0b1220;border-right-color:transparent;border-radius:50%;animation:dlspin .8s linear infinite}
+@keyframes dlspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.btn.busy::before{animation:none}}
+.dlnote{flex-basis:100%;margin:10px 0 0;max-width:420px}

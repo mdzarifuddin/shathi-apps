@@ -62,6 +62,18 @@
     a.rel = "noopener noreferrer";
     a.setAttribute("download", app.file);
     a.addEventListener("click", function () {
+      // The browser can take a few seconds to start a big file, so show that the tap worked.
+      var label = a.textContent;
+      a.classList.add("busy");
+      a.textContent = "Starting download…";
+      a.setAttribute("aria-busy", "true");
+      var note = a.parentNode && a.parentNode.querySelector(".dlnote");
+      if (!note && a.parentNode) { note = el("p", "small dlnote"); a.parentNode.appendChild(note); }
+      if (note) note.textContent = "Large file (" + app.size + "). It can take a few seconds to start, then check your browser's Downloads or notification bar.";
+      setTimeout(function () {
+        a.classList.remove("busy"); a.removeAttribute("aria-busy"); a.textContent = label;
+        if (note) note.textContent = "Download started. If nothing came, tap Download APK again.";
+      }, 8000);
       if (!API) return;
       try {
         fetch(API + "/api/dl/" + app.id, { method: "POST", keepalive: true })
