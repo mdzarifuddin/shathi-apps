@@ -481,56 +481,107 @@ window.APPS = [
     "android": "Android 7.0+ (64-bit ARM phones)",
     "file": "porikkhasathi-1.0.0.apk",
     "sha256": "9afa6b183d9a28f53717bf864c63c3456bdc2f77b557a4fb221ca2d76336e07d",
-    "about": "A Bangla exam-prep app for HSC students and teachers in Bangladesh, with a large question bank, mock exams, live exams and study tools.",
+    "about": "A Bangla exam-prep app for HSC students and teachers in Bangladesh, with a large question bank, mock and live exams, leaderboards and an AI study coach. Screens marked 'design preview' come from the app's design files; the last one is a live screenshot.",
     "features": [
       [
-        "Question bank",
-        "Chapter-wise MCQ and CQ practice with saved questions and history.",
+        "Home dashboard",
+        "Readiness score, daily mission and shortcuts to everything.",
         0
       ],
       [
-        "Mock & live exams",
-        "Timed exams for students, with live exams run by teachers.",
+        "Question bank",
+        "Chapter-wise MCQ and CQ practice with explanations and saved questions.",
         1
+      ],
+      [
+        "Timed exams",
+        "Mock exams with a question palette, review marks and negative marking.",
+        2
+      ],
+      [
+        "Detailed results",
+        "Accuracy, speed, topic-wise breakdown and answer review.",
+        3
+      ],
+      [
+        "Live exams",
+        "Compete in live exams with students across the country.",
+        4
+      ],
+      [
+        "Leaderboards",
+        "National, district and college rankings with levels and streaks.",
+        5
+      ],
+      [
+        "Statistics",
+        "Track practice and accuracy over time.",
+        6
+      ],
+      [
+        "AI coach",
+        "Finds weak topics from your mistakes and predicts your grade.",
+        7
       ],
       [
         "Duels & friends",
         "Challenge friends in head-to-head question duels."
       ],
       [
-        "Stats & coach",
-        "Track progress and weak topics, with coaching guidance."
-      ],
-      [
-        "Points & streaks",
-        "Gamified points, referral rewards and a leaderboard feel."
-      ],
-      [
         "Notes & downloads",
-        "Study notes and offline downloads.",
-        2
+        "Study notes and offline downloads."
       ],
       [
         "Teacher tools",
-        "Teachers can create and manage exams for their students."
+        "Teachers can create and manage exams and batches for their students."
       ]
     ],
     "notes": "Large download (98 MB). Works on 64-bit ARM phones, which is nearly all modern Android devices.",
     "shots": [
       {
+        "src": "img/shots/porar-d1.jpg",
+        "title": "Home dashboard (design preview)",
+        "text": "Readiness score, today's mission, notes and quick actions."
+      },
+      {
+        "src": "img/shots/porar-d2.jpg",
+        "title": "Question bank (design preview)",
+        "text": "Subject-wise and institution-wise questions with progress."
+      },
+      {
+        "src": "img/shots/porar-d3.jpg",
+        "title": "Exam screen (design preview)",
+        "text": "Timed MCQ with question palette, review marking and negative marking."
+      },
+      {
+        "src": "img/shots/porar-d4.jpg",
+        "title": "Result (design preview)",
+        "text": "Score, accuracy, topic-wise breakdown and answer review."
+      },
+      {
+        "src": "img/shots/porar-d5.jpg",
+        "title": "Live exams (design preview)",
+        "text": "Join live and upcoming exams nationwide."
+      },
+      {
+        "src": "img/shots/porar-d6.jpg",
+        "title": "Leaderboard (design preview)",
+        "text": "National, district and college rankings."
+      },
+      {
+        "src": "img/shots/porar-d7.jpg",
+        "title": "Statistics (design preview)",
+        "text": "Practice history, accuracy and streak charts."
+      },
+      {
+        "src": "img/shots/porar-d8.jpg",
+        "title": "AI coach (design preview)",
+        "text": "Weak-topic analysis and grade prediction."
+      },
+      {
         "src": "img/shots/porar-1.jpg",
-        "title": "Chapter-wise MCQ",
-        "text": "Board and top-college questions from Physics 1st to Biology, with explanations."
-      },
-      {
-        "src": "img/shots/porar-2.jpg",
-        "title": "Live exams & leaderboard",
-        "text": "Compete with students nationwide every Friday."
-      },
-      {
-        "src": "img/shots/porar-3.jpg",
-        "title": "Weak-topic coaching",
-        "text": "Learn which chapters need more time from your mistakes."
+        "title": "Welcome (from the app)",
+        "text": "The first screen of the installed app."
       }
     ]
   }
