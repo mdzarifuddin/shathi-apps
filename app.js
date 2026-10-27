@@ -180,13 +180,16 @@
     }
 
     var inst = el("section", "block");
-    inst.appendChild(el("h2", null, "Install & verify"));
+    inst.appendChild(el("h2", null, "How to install"));
     var ol = el("ol");
-    ["Download the APK above on your Android phone.",
-     "Open it. If asked, allow “Install unknown apps” for your browser or file manager.",
-     "Optional but recommended: check the SHA-256 below matches your downloaded file."
+    ["Tap Download APK on your Android phone.",
+     "Open the file. If asked, allow “Install unknown apps” for your browser."
     ].forEach(function (s) { ol.appendChild(el("li", null, s)); });
     inst.appendChild(ol);
+
+    var adv = el("details", "adv");
+    adv.appendChild(el("summary", null, "Advanced: verify the file (SHA-256)"));
+    adv.appendChild(el("p", "small", "Compare this fingerprint with your downloaded file. If it does not match, do not install."));
     var hash = el("div", "hash");
     hash.appendChild(el("code", null, app.sha256));
     var copy = el("button", "copy", "Copy");
@@ -197,8 +200,9 @@
       });
     });
     hash.appendChild(copy);
-    inst.appendChild(hash);
-    inst.appendChild(el("p", "small", "Windows: Get-FileHash file.apk · macOS/Linux: shasum -a 256 file.apk. If it does not match, do not install."));
+    adv.appendChild(hash);
+    adv.appendChild(el("p", "small", "Windows: Get-FileHash file.apk · macOS/Linux: shasum -a 256 file.apk"));
+    inst.appendChild(adv);
     root.appendChild(inst);
   }
 

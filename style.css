@@ -88,3 +88,11 @@ ol{color:var(--muted);padding-left:22px;margin:0 0 14px}ol li{margin:4px 0}
 .see:hover{text-decoration:underline}
 .feature.has-shot{cursor:default}
 main:focus,main:focus-visible{outline:none}
+
+.adv{margin-top:6px;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:2px 16px}
+.adv summary{cursor:pointer;padding:12px 0;font-size:14px;font-weight:600;color:var(--muted);list-style:none}
+.adv summary::-webkit-details-marker{display:none}
+.adv summary::before{content:"B8 ";color:var(--accent)}
+.adv[open] summary::before{content:"BE "}
+.adv[open]{padding-bottom:14px}
+.adv .hash{margin:10px 0 8px}
