@@ -476,12 +476,12 @@ window.APPS = [
       "#7c3aed",
       "#1e3a8a"
     ],
-    "version": "build 28",
-    "size": "98.6 MB",
+    "version": "build 29",
+    "size": "99.3 MB",
     "android": "Android 7.0+ (64-bit ARM phones)",
-    "file": "porar-shathi-build28.apk",
-    "sha256": "ad898bf90c1cafe13fc45cb71d6b84eb6ee95a488f9bb671815d24fdcdffc4a9",
-    "about": "A Bangla exam-prep app for HSC students and teachers in Bangladesh, with a large offline question bank, mock and live exams, friend duels and an AI study coach. All screenshots are from the installed app (build 28).",
+    "file": "porar-shathi-build29.apk",
+    "sha256": "f73a91cbce9e5578b7648f58f45ec9ffcb51d6e47c636d048eaf72de7c036299",
+    "about": "A Bangla exam-prep app for HSC students and teachers in Bangladesh, with a large offline question bank, mock and live exams, friend duels and an AI study coach. All screenshots are from the installed app (build 29).",
     "features": [
       [
         "Home dashboard",
