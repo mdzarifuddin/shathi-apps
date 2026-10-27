@@ -67,16 +67,37 @@
 
     var cats = ["All"];
     APPS.forEach(function (a) { if (cats.indexOf(a.category) < 0) cats.push(a.category); });
+
+    var box = el("div", "search");
+    var input = el("input");
+    input.type = "search"; input.placeholder = "Search apps or features (e.g. pdf, bus, game)";
+    input.setAttribute("aria-label", "Search apps"); input.autocomplete = "off"; input.spellcheck = false;
+    box.appendChild(input);
+    root.appendChild(box);
+
     var chips = el("div", "chips");
     var grid = el("section", "grid");
+    var empty = el("p", "empty", "No app matches your search.");
+    empty.hidden = true;
+    var cat = "All";
+
+    function apply() {
+      var q = input.value.trim().toLowerCase(), shown = 0;
+      Array.prototype.forEach.call(grid.children, function (card) {
+        var ok = (cat === "All" || card.getAttribute("data-cat") === cat) &&
+                 (!q || card.getAttribute("data-text").indexOf(q) >= 0);
+        card.hidden = !ok; if (ok) shown++;
+      });
+      empty.hidden = shown > 0;
+    }
+    input.addEventListener("input", apply);
+
     cats.forEach(function (c, i) {
       var b = el("button", "chip" + (i === 0 ? " on" : ""), c);
       b.type = "button";
       b.addEventListener("click", function () {
         Array.prototype.forEach.call(chips.children, function (x) { x.classList.toggle("on", x === b); });
-        Array.prototype.forEach.call(grid.children, function (card) {
-          card.hidden = !(c === "All" || card.getAttribute("data-cat") === c);
-        });
+        cat = c; apply();
       });
       chips.appendChild(b);
     });
@@ -86,6 +107,8 @@
       var card = el("a", "card");
       card.href = "#/" + app.id;
       card.setAttribute("data-cat", app.category);
+      card.setAttribute("data-text", [app.name, app.tagline, app.category, app.about]
+        .concat(app.features.map(function (f) { return f[0] + " " + f[1]; })).join(" ").toLowerCase());
       card.style.setProperty("--c1", app.color[0]);
       card.style.setProperty("--c2", app.color[1]);
       card.appendChild(icon(app));
@@ -101,6 +124,7 @@
       grid.appendChild(card);
     });
     root.appendChild(grid);
+    root.appendChild(empty);
   }
 
   function detail(app) {
