@@ -70,7 +70,7 @@
 
     var box = el("div", "search");
     var input = el("input");
-    input.type = "search"; input.placeholder = "Search apps or features (e.g. pdf, bus, game)";
+    input.type = "search"; input.placeholder = "Search apps or features";
     input.setAttribute("aria-label", "Search apps"); input.autocomplete = "off"; input.spellcheck = false;
     box.appendChild(input);
     root.appendChild(box);

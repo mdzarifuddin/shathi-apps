@@ -92,13 +92,13 @@ main:focus,main:focus-visible{outline:none}
 .adv{margin-top:6px;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:2px 16px}
 .adv summary{cursor:pointer;padding:12px 0;font-size:14px;font-weight:600;color:var(--muted);list-style:none}
 .adv summary::-webkit-details-marker{display:none}
-.adv summary::before{content:"B8 ";color:var(--accent)}
-.adv[open] summary::before{content:"BE "}
+.adv summary::before{content:"\25B8 ";color:var(--accent)}
+.adv[open] summary::before{content:"\25BE "}
 .adv[open]{padding-bottom:14px}
 .adv .hash{margin:10px 0 8px}
 
 .search{position:relative;max-width:520px;margin:0 auto 14px}
-.search::before{content:"F50D";position:absolute;left:18px;top:50%;transform:translateY(-52%);font-size:15px;opacity:.7;pointer-events:none}
+.search::before{content:"\1F50D";position:absolute;left:18px;top:50%;transform:translateY(-52%);font-size:15px;opacity:.7;pointer-events:none}
 .search input{width:100%;font:inherit;font-size:16px;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:13px 20px 13px 46px;backdrop-filter:blur(10px);outline:none;transition:border-color .15s,box-shadow .15s}
 .search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
 .search input::placeholder{color:var(--muted)}
