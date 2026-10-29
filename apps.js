@@ -529,6 +529,14 @@ window.APPS = [
       [
         "Teacher tools",
         "Teachers can create exams, share them by code or link, and see live results."
+      ],
+      [
+        "English & Bangla 2nd practice",
+        "English 1st and 2nd paper and Bangla 2nd paper arranged by the board question slots (Q1-Q16), with Model Questions, demo answers and an eye button for model answers."
+      ],
+      [
+        "Updates inside the app",
+        "The newest build (35) is delivered by the in-app update, so this download stays small enough for GitHub; open the app and accept the update popup."
       ]
     ],
     "notes": "Large download (98.6 MB). Works on 64-bit ARM phones, which is nearly all modern Android devices.",
