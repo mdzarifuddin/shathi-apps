@@ -476,7 +476,7 @@ window.APPS = [
       "#7c3aed",
       "#1e3a8a"
     ],
-    "version": "1.0.0 (build 30 here · build 35 latest via update)",
+    "version": "1.0.0 (build 30 here · build 36 latest via update)",
     "size": "99.3 MB",
     "android": "Android 7.0+ (64-bit ARM phones)",
     "file": "porar-shathi-build30.apk",
