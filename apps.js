@@ -476,105 +476,218 @@ window.APPS = [
       "#7c3aed",
       "#1e3a8a"
     ],
-    "version": "1.0.0 (build 30 here · build 36 latest via update)",
+    "version": "1.0.0 (build 37)",
     "size": "99.3 MB",
     "android": "Android 7.0+ (64-bit ARM phones)",
     "file": "porar-shathi-build30.apk",
     "sha256": "7cd1a6696bb1ef5bdeed9ef6a36ed91e60c313871ee5f0913e99c2e34e385fc5",
-    "about": "A Bangla exam-prep app for HSC students and teachers in Bangladesh, with a large offline question bank, mock and live exams, friend duels and an AI study coach. All screenshots are from the installed app (build 30).",
+    "about": "A Bangla exam-prep app for HSC students and teachers in Bangladesh, with a large offline question bank, mock and live exams, friend duels and an AI study coach. Screenshots are from build 37 (light and dark mode, student, teacher and admin).",
     "features": [
       [
-        "Home dashboard",
-        "Readiness score, daily mission and shortcuts to everything.",
+        "Premium home",
+        "Compact dashboard with prep progress, six quick shortcuts, a daily mission card that hides when you finish, and feature tiles.",
         0
       ],
       [
-        "Question bank",
-        "Subject-wise and institution-wise MCQ and CQ practice with progress per subject.",
+        "Dark and light mode",
+        "Both themes are designed for every screen.",
         1
+      ],
+      [
+        "Question bank by subject",
+        "Large subject icons with chapter and question counts, and the English paper name under each.",
+        2
+      ],
+      [
+        "Question bank by institution",
+        "Browse by university, with the logo and every exam year from 2025-2026 back to the 1990s.",
+        4
+      ],
+      [
+        "MCQ practice",
+        "Fast one-tap answers, board / year tags, eye button for answers and a running score.",
+        6
       ],
       [
         "Timed exams",
         "Mock MCQ exams with your chosen subjects, count and time, and optional negative marking.",
-        2
+        7
       ],
       [
-        "Live exams",
-        "Join an upcoming live exam, or enter a teacher's exam code or link.",
-        3
+        "Statistics",
+        "Track practice and accuracy over time.",
+        8
       ],
       [
-        "Duels",
-        "Challenge a friend or a random opponent in head-to-head question duels.",
-        4
+        "Profile",
+        "Level, points, saved questions, wrong answers and exam history.",
+        9
       ],
       [
         "AI coach",
         "Finds weak topics from your mistakes, predicts a grade and plans your day.",
-        5
+        10
       ],
       [
-        "Statistics & leaderboard",
-        "Track practice and accuracy over time and see national and college rankings.",
-        6
+        "Live exams",
+        "Join an upcoming live exam, or enter a teacher's exam code or link.",
+        11
       ],
       [
-        "Detailed results",
-        "Accuracy, speed, topic-wise breakdown and answer review after each exam."
+        "Duels",
+        "Challenge a friend or a random opponent in head-to-head question duels.",
+        12
       ],
       [
         "Notes & formulas",
-        "Study notes and formulas for offline revision."
+        "Study notes and formulas for offline revision.",
+        13
+      ],
+      [
+        "Leaderboard",
+        "Weekly and all-time ranking.",
+        14
+      ],
+      [
+        "Premium",
+        "Unlock unlimited practice and PDF export.",
+        15
       ],
       [
         "Teacher tools",
-        "Teachers can create exams, share them by code or link, and see live results."
+        "Create question sets, share exams by code or link, export PDF question papers, manage batches, and see live results.",
+        16
+      ],
+      [
+        "Admin panel",
+        "Question review and editing, approvals, user and activity overview.",
+        20
       ],
       [
         "English & Bangla 2nd practice",
-        "English 1st and 2nd paper and Bangla 2nd paper arranged by the board question slots (Q1-Q16), with Model Questions, demo answers and an eye button for model answers."
+        "English 1st and 2nd paper and Bangla 2nd paper arranged by the board question slots, with model questions and answers."
       ],
       [
         "Updates inside the app",
-        "The newest build (35) is delivered by the in-app update, so this download stays small enough for GitHub; open the app and accept the update popup."
+        "The app checks for new builds and updates itself, so you always get the latest one (now build 37)."
       ]
     ],
-    "notes": "Large download (98.6 MB). Works on 64-bit ARM phones, which is nearly all modern Android devices.",
+    "notes": "Large download (98.6 MB). The file here is the first installer; on first launch the app offers the update popup and moves to build 37. Works on 64-bit ARM phones, which is nearly all modern Android devices.",
     "shots": [
       {
-        "src": "img/shots/porar-1.jpg",
-        "title": "Home dashboard",
-        "text": "Readiness score, today's mission, notes and quick actions."
+        "src": "img/shots/porar-s01.jpg",
+        "title": "Home (light)",
+        "text": "Prep dashboard, quick access, today's mission and feature tiles on one screen."
       },
       {
-        "src": "img/shots/porar-2.jpg",
+        "src": "img/shots/porar-s02.jpg",
+        "title": "Home (dark)",
+        "text": "Full dark mode on every screen."
+      },
+      {
+        "src": "img/shots/porar-s03.jpg",
         "title": "Question bank",
-        "text": "Subject-wise questions with chapter counts and progress."
+        "text": "Subjects as large icons with the English paper name, chapters and question counts."
       },
       {
-        "src": "img/shots/porar-3.jpg",
-        "title": "MCQ exam setup",
+        "src": "img/shots/porar-s04.jpg",
+        "title": "Question bank (dark)",
+        "text": "Same subject grid in dark mode."
+      },
+      {
+        "src": "img/shots/porar-s05.jpg",
+        "title": "By institution",
+        "text": "University and college logos in a 4-column grid, with the exam years of each."
+      },
+      {
+        "src": "img/shots/porar-s06.jpg",
+        "title": "Chapter list",
+        "text": "Chapters with MCQ / CQ counts and progress."
+      },
+      {
+        "src": "img/shots/porar-s07.jpg",
+        "title": "MCQ practice",
+        "text": "Filters, one-tap answers, board and year tags, and a bottom bar with your score."
+      },
+      {
+        "src": "img/shots/porar-s08.jpg",
+        "title": "Exam setup",
         "text": "Pick subjects, question count, time and negative marking."
       },
       {
-        "src": "img/shots/porar-4.jpg",
-        "title": "Live exams",
-        "text": "Join with a teacher's code, or register for the next live exam."
+        "src": "img/shots/porar-s09.jpg",
+        "title": "Statistics",
+        "text": "Practice, accuracy and streak over 7 / 30 days or all time."
       },
       {
-        "src": "img/shots/porar-5.jpg",
-        "title": "Daily duel",
-        "text": "Pick subjects and difficulty, then face an opponent."
+        "src": "img/shots/porar-s10.jpg",
+        "title": "Profile",
+        "text": "Level, points, saved questions, wrong answers and exam history."
       },
       {
-        "src": "img/shots/porar-6.jpg",
+        "src": "img/shots/porar-s11.jpg",
         "title": "AI coach",
         "text": "Predicted grade, weak topics and a plan for today."
       },
       {
-        "src": "img/shots/porar-7.jpg",
-        "title": "Statistics",
-        "text": "Daily practice, accuracy trend and leaderboard."
+        "src": "img/shots/porar-s12.jpg",
+        "title": "Live exams",
+        "text": "Join with a teacher's code, or register for the next live exam."
+      },
+      {
+        "src": "img/shots/porar-s13.jpg",
+        "title": "Duel",
+        "text": "Pick subjects and difficulty, then face an opponent."
+      },
+      {
+        "src": "img/shots/porar-s14.jpg",
+        "title": "Notes",
+        "text": "Notes and formulas by chapter for offline revision."
+      },
+      {
+        "src": "img/shots/porar-s15.jpg",
+        "title": "Leaderboard",
+        "text": "Weekly and all-time ranking by subject."
+      },
+      {
+        "src": "img/shots/porar-s16.jpg",
+        "title": "Premium",
+        "text": "What the free and Premium plans include."
+      },
+      {
+        "src": "img/shots/porar-t01.jpg",
+        "title": "Teacher dashboard",
+        "text": "Question sets, exams given, students and average score at a glance."
+      },
+      {
+        "src": "img/shots/porar-t02.jpg",
+        "title": "Teacher: new question set",
+        "text": "Choose subject, chapter and type, then pick questions from the bank."
+      },
+      {
+        "src": "img/shots/porar-t03.jpg",
+        "title": "Teacher: PDF export",
+        "text": "Make a question paper PDF with answer key, OMR and your own fonts and layout."
+      },
+      {
+        "src": "img/shots/porar-t04.jpg",
+        "title": "Teacher: batches",
+        "text": "Group students into batches and classes."
+      },
+      {
+        "src": "img/shots/porar-a01.jpg",
+        "title": "Admin dashboard",
+        "text": "Users, installs, activity and question totals."
+      },
+      {
+        "src": "img/shots/porar-a02.jpg",
+        "title": "Admin: questions",
+        "text": "Search, review and edit every question in the bank."
+      },
+      {
+        "src": "img/shots/porar-a03.jpg",
+        "title": "Admin: to-do and coverage",
+        "text": "Pending approvals and per-subject question coverage."
       }
     ]
   }
