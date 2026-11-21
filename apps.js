@@ -13,11 +13,11 @@ window.APPS = [
       "#1e40af"
     ],
     "glyph": "R",
-    "version": "1.1 (build 13)",
+    "version": "1.2 (build 14)",
     "size": "15.8 MB",
     "android": "Android 7.0+",
-    "file": "rapid-office-pro-1.1.apk",
-    "sha256": "37b08d4291462f2fb6dbc6aeffd2eaade73acdfaecd3c395c4966acb746faeba",
+    "file": "rapid-office-pro-1.2.apk",
+    "sha256": "20d721ced67aac54d46e6881d6d2d5192e7d1c70411536f35ab32347b62c25a6",
     "about": "Open PDF, Word, Excel, PowerPoint, OpenDocument, CSV, e-books and plain text in one light app. Files are recognised by their content, not their name, and large spreadsheets open in seconds.",
     "features": [
       [
@@ -50,6 +50,15 @@ window.APPS = [
         1
       ],
       [
+        "Share some pages",
+        "Tap Share, pick pages by tapping or by typing 20-17, 24, 56-59, name the new PDF and send it. Rotate or crop first if you want.",
+        2
+      ],
+      [
+        "Stays smooth on big scans",
+        "Gives memory back while you read long scanned PDFs, so a big book does not slow the phone down over time."
+      ],
+      [
         "Keeps your history",
         "Installs over Rapid PDF and earlier Rapid Office Pro builds without losing reading history.",
         0
@@ -66,6 +75,11 @@ window.APPS = [
         "src": "img/shots/rapid-2.jpg",
         "title": "Spreadsheet viewer",
         "text": "A CSV opens as a real grid with column letters, row numbers and a reading toolbar."
+      },
+      {
+        "src": "img/shots/rapid-3.jpg",
+        "title": "Share pages",
+        "text": "Pick pages, then name the new PDF and share or save it."
       }
     ]
   },
