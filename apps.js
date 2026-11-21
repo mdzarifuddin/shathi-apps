@@ -93,11 +93,11 @@ window.APPS = [
       "#0d9488",
       "#115e59"
     ],
-    "version": "1.0.1",
-    "size": "56.2 MB",
+    "version": "1.0.4",
+    "size": "52.8 MB",
     "android": "Android 7.0+",
-    "file": "pothshathi-1.0.1.apk",
-    "sha256": "2e1f0591a8b39468c137720b4daaf92e721e95005b8f2aaa0bef53d7b500704a",
+    "file": "pothshathi-1.0.4.apk",
+    "sha256": "48bfe47c50b6ca6b1d5ea7ca4e7025fefdd8727734c52bc8feddf108a5eb86ab",
     "about": "A Bangla-first commuting companion that shows fares and routes for Dhaka city buses, long-distance buses and the metro rail. Independent app, not affiliated with BRTA or DMTCL.",
     "features": [
       [
