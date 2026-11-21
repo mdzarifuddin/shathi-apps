@@ -169,11 +169,11 @@ window.APPS = [
       "#7c3aed",
       "#4c1d95"
     ],
-    "version": "1.1.3",
-    "size": "57.8 MB",
+    "version": "1.3.0",
+    "size": "58.0 MB",
     "android": "Android 7.0+",
-    "file": "life-tracker-pro-1.1.3.apk",
-    "sha256": "10de5e391294a67b91bda1ca9bf6b8d3103af89ec01f06fb26c6619683bdbbe4",
+    "file": "life-tracker-pro-1.3.0.apk",
+    "sha256": "09ce667647ff3481eed5f4c15153550a4672f82a8a24453612175943dec0dacd",
     "about": "An offline-first personal life-management app for private tutors, university students, thesis researchers and government-job aspirants in Bangladesh. Dark mode by default, built for one-hand use.",
     "features": [
       [
@@ -193,7 +193,7 @@ window.APPS = [
       ],
       [
         "Fee tracker",
-        "Paid / pending / partial per student; paid fees post to income automatically.",
+        "Paid / due / partial per student and billing cycle, with partial payments and carry-forward. Tuition payments stay in the student's records and do not touch Finance.",
         1
       ],
       [
@@ -205,6 +205,18 @@ window.APPS = [
         "Govt job & thesis tracker",
         "Daily MCQ targets and stage-based thesis progress with deadline reminders.",
         4
+      ],
+      [
+        "Add many classes",
+        "Paste your notes like 'Jan_26: Labib - 3,5,8,16' and every class is added at once; money lines are ignored and missing students can be created."
+      ],
+      [
+        "Busy times",
+        "Note when a student cannot study (School, College, Coaching, Private tutor, Other) and get a clash warning when scheduling."
+      ],
+      [
+        "Backup, export & share",
+        "Save everything as one JSON file, share it, or import it back with a safety copy. The vault PIN is never included."
       ],
       [
         "Reports",
