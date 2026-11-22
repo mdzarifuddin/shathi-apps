@@ -169,11 +169,11 @@ window.APPS = [
       "#7c3aed",
       "#4c1d95"
     ],
-    "version": "1.3.0",
-    "size": "58.0 MB",
+    "version": "1.4.0",
+    "size": "58.6 MB",
     "android": "Android 7.0+",
-    "file": "life-tracker-pro-1.3.0.apk",
-    "sha256": "09ce667647ff3481eed5f4c15153550a4672f82a8a24453612175943dec0dacd",
+    "file": "life-tracker-pro-1.4.0.apk",
+    "sha256": "f836b68f99ba8d787d46548d120c37dc60dae0a3c2a6ccad157a07b8dcd512be",
     "about": "An offline-first personal life-management app for private tutors, university students, thesis researchers and government-job aspirants in Bangladesh. Dark mode by default, built for one-hand use.",
     "features": [
       [
@@ -209,6 +209,18 @@ window.APPS = [
       [
         "Add many classes",
         "Paste your notes like 'Jan_26: Labib - 3,5,8,16' and every class is added at once; money lines are ignored and missing students can be created."
+      ],
+      [
+        "Mark classes paid",
+        "Tick a payment per class date, or say 'payment done till 22 Nov' and every class up to that day is marked paid in its own colour. Stays in the student's records, never in Finance."
+      ],
+      [
+        "Tuition history & JSON export",
+        "One screen with every student, class and payment, plus export, save and import as a readable JSON file; importing twice never duplicates."
+      ],
+      [
+        "Themes, text size & language",
+        "Background presets or your own gradient, adjustable text size, and English or Bangla for the main screens."
       ],
       [
         "Busy times",
